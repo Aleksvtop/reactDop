@@ -22,7 +22,6 @@ export const City = (props: CityPropsType) => {
     return (
         <div>
             <div></div>
-            <div></div>
             <ul>
                 {mappedMoney}
             </ul>
