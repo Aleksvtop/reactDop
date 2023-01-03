@@ -1,5 +1,6 @@
 import {MoneyType} from "./App";
 import {CurrentBancomat} from "./CurrentBankomat";
+import styled from "styled-components";
 
 
 type CityPropsType = {
@@ -8,7 +9,7 @@ type CityPropsType = {
 
 export const City = (props: CityPropsType) => {
 
-    const mappedMoney = props.data.map((el,index) => {
+    const mappedMoney = props.data.map((el) => {
         return(
             /*<li key={index}>
                 <div>{el.banknotes}</div>
@@ -22,10 +23,18 @@ export const City = (props: CityPropsType) => {
     return (
         <div>
             <div></div>
-            <ul>
+            <Wrapper>
                 {mappedMoney}
-            </ul>
+            </Wrapper>
 
         </div>
     )
 }
+
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-size: 30px;
+  
+`
